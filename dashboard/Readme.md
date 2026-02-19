@@ -18,13 +18,14 @@ Dentro del esquema general del proyecto, nuestro equipo tiene la responsabilidad
 
 | Prefijo | Nombre de la Tabla | Descripción del Fundamento |
 | :--- | :--- | :--- |
-| **tbd** | `Acceso` | Control y registro de entradas a áreas restringidas de recursos. |
-| **tbc** | `Equipamientos` | Catálogo maestro de dispositivos médicos y mobiliario. |
-| **tbc** | `Espacios` | Definición lógica de la infraestructura y áreas físicas. |
-| **tbd** | `Inventario_Equipamientos` | Gestión de existencias, estados y trazabilidad de activos. |
+| **tbb** | `Personas_Morales` | Identificación legal y fiscal de socios comerciales. |
 | **tbb** | `Proveedores` | Directorio de entidades externas de suministro. |
 | **tbb** | `Transacciones_Financieras` | Registro de movimientos económicos por adquisición de recursos. |
-| **tbb** | `Personas_Morales` | Identificación legal y fiscal de socios comerciales. |
+| **tbc** | `Equipamientos` | Catálogo maestro de dispositivos médicos y mobiliario. |
+| **tbc** | `Espacios` | Definición lógica de la infraestructura y áreas físicas. |
+| **tbd** | `Accesos` | Control y registro de entradas a áreas restringidas de recursos. |
+| **tbd** | `Aprobaciones` | Definición lógica de la infraestructura y áreas físicas. |
+| **tbd** | `Inventario_Equipamientos` | Gestión de existencias, estados y trazabilidad de activos. |
 
 ---
 
