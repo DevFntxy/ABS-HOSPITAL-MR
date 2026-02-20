@@ -30,7 +30,6 @@ Dentro del esquema general del proyecto, nuestro equipo tiene la responsabilidad
 | **tbc** | `Equipamientos` | Catálogo maestro de dispositivos médicos y mobiliario. |
 | **tbc** | `Espacios` | Definición lógica de la infraestructura y áreas físicas. |
 | **tbd** | `Accesos` | Control y registro de entradas a áreas restringidas de recursos. |
-| **tbd** | `Aprobaciones` | Definición lógica de la infraestructura y áreas físicas. |
 | **tbd** | `Inventario_Equipamientos` | Gestión de existencias, estados y trazabilidad de activos. |
 
 
