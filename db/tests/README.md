@@ -5,7 +5,7 @@ Carpeta de pruebas realizadas a los procedimientos almacenados y sus funciones r
 ### Test 1 - Registro de 1 Paciente
 ###### Comando utilizado:
     
-    call hospital_230260.sp_poblar_pacientes(1, 'H', 0, 90, 'Vivo', '');
+    call hospital_230260.sp_poblar_pacientes(1, NULL, NULL, NULL, NULL, NULL, NULL);
 
 ###### Evidencia de ejecución exitosa:
 
@@ -32,7 +32,7 @@ tbb_personas_fisicas:
 
 ##### Comando utilizado:
     
-    call hospital_230260.sp_poblar_pacientes(10, 'M', 10, 20, 'Vivo', '');
+    call hospital_230260.sp_poblar_pacientes(10, NULL, NULL, NULL, NULL, NULL, NULL);
 
 ###### Evidencia de ejecución exitosa:
 
@@ -68,7 +68,7 @@ tbb_personas_fisicas:
 
 ##### Comando utilizado:
     
-    call hospital_230260.sp_poblar_pacientes(100, 'H', 25, 70, 'Vivo', '');
+    call hospital_230260.sp_poblar_pacientes(100, NULL, NULL, NULL, NULL, NULL, NULL);
 
 ###### Evidencia de ejecución exitosa:
 
@@ -104,7 +104,7 @@ tbb_personas_fisicas:
 
 ##### Comando utilizado:
     
-    call hospital_230260.sp_poblar_pacientes(1000, 'M', 0, 90, 'Vivo', '');
+    call hospital_230260.sp_poblar_pacientes(1000, NULL, NULL, NULL, NULL, NULL, NULL);
 
 ###### Evidencia de ejecución exitosa:
 
@@ -140,7 +140,7 @@ tbb_personas_fisicas:
 
 ##### Comando utilizado:
     
-    call hospital_230260.sp_poblar_pacientes(10000, 'M', 0, 90, 'Vivo', '');
+    call hospital_230260.sp_poblar_pacientes(10000, NULL, NULL, NULL, NULL, NULL, NULL);
 
 ###### Evidencia de ejecución exitosa:
 
@@ -176,7 +176,7 @@ tbb_personas_fisicas:
 
 ##### Comando utilizado:
     
-    call hospital_230260.sp_poblar_pacientes(1000000, 'H', 0, 90, 'Vivo', '');
+    call hospital_230260.sp_poblar_pacientes(1000000, NULL, NULL, NULL, NULL, NULL, NULL);
 
 ###### Evidencia de ejecución exitosa:
 
@@ -212,7 +212,7 @@ tbb_personas_fisicas:
 
 ##### Comando utilizado:
     
-    call hospital_230260.sp_poblar_pacientes(150, 'M', 12, 24, 'Vivo', '');
+    call hospital_230260.sp_poblar_pacientes(150, 'M', NULL, NULL, NULL, NULL, NULL);
 
 ###### Evidencia de ejecución exitosa:
 
@@ -248,7 +248,7 @@ tbb_personas_fisicas:
 
 ##### Comando utilizado:
     
-    call hospital_230260.sp_poblar_pacientes(340, 'H', 20, 30, 'Vivo', '');
+    call hospital_230260.sp_poblar_pacientes(340, 'H', 20, 30, NULL, NULL, NULL);
 
 ###### Evidencia de ejecución exitosa:
 
@@ -284,7 +284,7 @@ tbb_personas_fisicas:
 
 ##### Comando utilizado:
     
-    call hospital_230260.sp_poblar_pacientes(500, 'H', 0, 65, 'Vivo', '');
+    call hospital_230260.sp_poblar_pacientes(500, NULL, NULL, 65, NULL, NULL, NULL);
 
 ###### Evidencia de ejecución exitosa:
 
@@ -320,7 +320,7 @@ tbb_personas_fisicas:
 
 ##### Comando utilizado:
     
-    call hospital_230260.sp_poblar_pacientes(2200, 'H', 5, 14, 'Vivo', '');
+    call hospital_230260.sp_poblar_pacientes(2200, NULL, NULL, NULL, 'Vivo', NULL, NULL);
 
 ###### Evidencia de ejecución exitosa:
 
@@ -356,7 +356,7 @@ tbb_personas_fisicas:
 
 ##### Comando utilizado:
     
-    call hospital_230260.sp_poblar_pacientes(502, 'M', 0, 45, 'Finado', '');
+    call hospital_230260.sp_poblar_pacientes(502, 'M', NULL, 45, 'Finado', NULL, NULL);
 
 ###### Evidencia de ejecución exitosa:
 
@@ -392,7 +392,7 @@ tbb_personas_fisicas:
 
 ##### Comando utilizado:
     
-    call hospital_230260.sp_poblar_pacientes(30, 'H', 25, 52, 'Coma', '');
+    call hospital_230260.sp_poblar_pacientes(30, NULL, NULL, NULL, 'Coma', NULL, NULL);
 
 ###### Evidencia de ejecución exitosa:
 
@@ -428,7 +428,7 @@ tbb_personas_fisicas:
 
 ##### Comando utilizado:
     
-    call hospital_230260.sp_poblar_pacientes(15, 'H', 29, 47, 'Vegetativo', '');
+    call hospital_230260.sp_poblar_pacientes(15, NULL, NULL, NULL, 'Vegetativo', NULL, NULL);
 
 ###### Evidencia de ejecución exitosa:
 
@@ -464,7 +464,7 @@ tbb_personas_fisicas:
 
 ##### Comando utilizado:
     
-    call hospital_230260.sp_poblar_pacientes(107, 'M', 11, 88, 'Vivo', 'Cuidados Paliativos');
+    call hospital_230260.sp_poblar_pacientes(107, NULL, NULL, NULL, NULL, 'Cuidados Paliativos', NULL);
 
 ###### Evidencia de ejecución exitosa:
 
@@ -500,7 +500,7 @@ tbb_personas_fisicas:
 
 ##### Comando utilizado:
     
-    call hospital_230260.sp_poblar_pacientes(208, 'M', 0, 15, 'Vivo', '');
+    call hospital_230260.sp_poblar_pacientes(208, NULL, NULL, NULL, NULL, NULL, 'Pediátrico');
 
 ###### Evidencia de ejecución exitosa:
 
