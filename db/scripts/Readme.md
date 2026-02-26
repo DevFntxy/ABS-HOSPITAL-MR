@@ -23,36 +23,164 @@ Diseño de base de datos, modelado de entidades, control de inventarios, proveed
 
 ---
 
-📑 Entidades y Fundamentos de Base de Datos  
-
-| Prefijo | Nombre de la Tabla               | Fundamento |
-|--------|---------------------------------|------------|
-| tbb | Personas_Morales | Identificación legal y fiscal de socios comerciales y proveedores. |
-| tbb | Proveedores | Directorio de entidades externas encargadas del suministro de recursos. |
-| tbb | Transacciones_Financieras | Registro de movimientos económicos relacionados con la adquisición de recursos. |
-| tbc | Equipamientos | Catálogo maestro de dispositivos médicos, mobiliario y activos físicos. |
-| tbc | Espacios | Definición lógica de la infraestructura y áreas físicas del hospital. |
-| tbd | Accesos | Control y registro de entradas a áreas restringidas de recursos materiales. |
-| tbd | Aprobaciones | Gestión de autorizaciones administrativas relacionadas con recursos e infraestructura. |
-| tbd | Inventario_Equipamientos | Control de existencias, estados operativos y trazabilidad de activos. |
+# 🔐 Roles y Privilegios  
+**Base de Datos:** hospital
 
 ---
 
-🧠 Enfoque del Diseño  
+## 📌 Descripción General
 
-- Separación clara entre datos base (`tbb`), catálogos (`tbc`) y datos dinámicos (`tbd`)
-- Normalización orientada a integridad referencial
-- Compatibilidad con esquemas de roles y privilegios
-- Preparación para auditoría, control y escalabilidad
-- Alineación con la integración modular del sistema hospitalario
+La base de datos **hospital** implementa un esquema de seguridad basado en **roles por área funcional**, aplicando el **principio de mínimo privilegio**.
+
+Cada usuario cuenta únicamente con los permisos necesarios para desempeñar sus funciones dentro del hospital, evitando accesos innecesarios a información sensible.
 
 ---
 
-🚀 Estado del Repositorio  
+## 👥 Roles y Áreas
 
-**Fase actual:** Planificación y diseño  
+| Rol | Área | Alcance |
+|----|-----|--------|
+| ge_user | Gerencia | Gestión administrativa estratégica |
+| hr_user | Recursos Humanos | Gestión de personal |
+| mr_user | Recursos Materiales | Inventario y proveedores |
+| ms_user | Servicios Médicos | Atención médica operativa |
+| md_user | Registros Médicos | Expedientes clínicos |
+| ph_user | Farmacia | Medicamentos e inventario farmacéutico |
+| developer | Desarrollo | Solo lectura global |
 
-Este repositorio contiene el diseño estructural del módulo MR y será **clonado e integrado** con los demás módulos para conformar el **núcleo central de datos de la Plataforma Administrativa Hospitalaria**.
+---
 
-**Aviso de Integración:**  
-Se ha respetado la **nomenclatura estandarizada de tablas y prefijos**, facilitando el *merge* con los módulos desarrollados por otros equipos.
+## 🏛 GERENCIA – ge_user
+
+### Permisos
+- ALTER  
+- DELETE  
+- INSERT  
+- UPDATE  
+- REFERENCES  
+
+### Tablas
+- tbb_quejas_sugerencias  
+- tbc_areas  
+- tbc_organos  
+- tbc_patologias  
+- tbc_servicios  
+- tbd_aprobaciones  
+
+**REFERENCES sobre:**  
+- tbd_accesos  
+
+**Enfoque:** Gestión estratégica y administrativa.
+
+---
+
+## 👨‍💼 RECURSOS HUMANOS – hr_user
+
+### Permisos
+- ALTER  
+- DELETE  
+- INSERT  
+- UPDATE  
+- REFERENCES  
+
+### Tablas
+- tbb_departamentos  
+- tbb_personal  
+- tbb_personal_medico  
+- tbb_personas  
+- tbb_personas_fisicas  
+- tbd_horarios  
+
+**Enfoque:** Administración del personal y estructura organizacional.
+
+---
+
+## 🏗 RECURSOS MATERIALES – mr_user
+
+### Permisos
+- ALTER  
+- DELETE  
+- INSERT  
+- UPDATE  
+- REFERENCES  
+
+### Tablas
+- tbb_personas_morales  
+- tbb_proveedores  
+- tbb_transacciones_financieras  
+- tbc_equipamientos  
+- tbc_espacios  
+- tbd_accesos  
+- tbd_inventario_equipamientos  
+
+**REFERENCES sobre:**  
+- tbb_personas_fisicas  
+
+**Enfoque:** Gestión de inventario, proveedores y activos hospitalarios.
+
+---
+
+## 🏥 SERVICIOS MÉDICOS – ms_user
+
+### Permisos
+- ALTER  
+- DELETE  
+- INSERT  
+- UPDATE  
+- REFERENCES  
+
+### Tablas
+- tbb_dietas  
+- tbb_transfusiones_sanguineas  
+- tbb_traslados  
+- tbc_cirugias  
+- tbc_servicios_medicos  
+- tbd_campanias  
+- tbd_citas_medicas  
+- tbd_valoraciones  
+
+**Enfoque:** Operación clínica diaria y atención médica.
+
+---
+
+## 📁 REGISTROS MÉDICOS – md_user
+
+### Permisos
+- ALTER  
+- DELETE  
+- INSERT  
+- UPDATE  
+- REFERENCES  
+
+### Tablas
+- tbb_defunciones  
+- tbb_diagnosticos  
+- tbb_documentos_oficiales  
+- tbb_expedientes_medicos  
+- tbb_nacimientos  
+- tbb_notas_medicas  
+- tbb_pacientes  
+- tbb_tratamientos  
+- tbc_signos_vitales  
+- tbd_padecimientos  
+
+**Enfoque:** Gestión de historial clínico y expediente médico.
+
+---
+
+## 💊 FARMACIA – ph_user
+
+### Permisos
+- ALTER  
+- DELETE  
+- INSERT  
+- UPDATE  
+- REFERENCES  
+
+### Tablas
+- tbb_recetas_medicas  
+- tbc_medicamentos  
+- tbd_inventario_medicamentos  
+- tbd_lotes_medicamentos  
+
+**Enfoque:** Control farmacológico y administración de medicamentos.ilitando el *merge* con los módulos desarrollados por otros equipos.
