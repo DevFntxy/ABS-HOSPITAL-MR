@@ -1,5 +1,5 @@
 # 🔐 Roles y Privilegios  
-**Base de Datos:** `hospital`
+**Base de Datos:** `hospital_matricula`
 
 ---
 
