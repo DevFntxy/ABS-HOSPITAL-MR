@@ -2,6 +2,9 @@
 ---
 Carpeta de evidencias sobre las pruebas realizadas a los endpoints de la API de Hospital MR (`hospital_api.py`).
 
+### Navicat antes de las inserciones
+<p align="center"><img src="/api/tests/images/navicat_antes.png" alt="Navicat antes de las pruebas" width="full"/></p>
+
 ### Test 1 - Insertar 100k Pacientes
 ###### Request / Endpoint utilizado:
     
@@ -388,3 +391,5 @@ Carpeta de evidencias sobre las pruebas realizadas a los endpoints de la API de 
   "resultado": []
 }
 ```
+### Navicat despues de las inserciones
+<p align="center"><img src="/api/tests/images/navicat_despues.png" alt="Navicat despues de las pruebas" width="full"/></p>

@@ -80,7 +80,7 @@ async def poblar_pacientes(request: PoblarPacientesRequest):
     - **genero**: Género del paciente (Opcional, **Valido: 'M', 'F', 'N/B'**)
     - **edad_minima**: Edad mínima (Opcional)
     - **edad_maxima**: Edad máxima (Opcional)
-    - **estatus_vida**: Estatus de vida (Opcional, **Valido: 'Vivo', 'Finado', 'Coma', 'Vegetativo', 'Desconocido'**)
+    - **estatus_vida**: Estatus de vida (Opcional, **Valido: 'Vivo', 'Finado', 'Coma', 'Vegetativo', 'Invalido', 'Desconocido'**)
     - **estatus_medico**: Estatus médico (Opcional, **Valido: 'Cuidados Paliativos', 'Diabetico', 'Cancer', 'Trauma' 'Craneoencefalico', 'Cardiacos', 'Pediatrico', 'COVID'**)
     - **etapa_vida**: Etapa de vida (Opcional, **Valido: 'Recién nacido', 'Neonato', 'Infancia', 'Adolescencia', 'Juventud', 'Adultez', 'Vejez'**)
     """
