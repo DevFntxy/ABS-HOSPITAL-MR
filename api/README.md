@@ -48,7 +48,7 @@ Ejecuta el procedimiento almacenado `sp_poblar_pacientes`.
 - `estatus_medico` (VARCHAR(150), opcional: 'Cuidados Paliativos', 'Diabetico', 'Cancer', 'Trauma' 'Craneoencefalico', 'Cardiacos', 'Pediatrico', 'COVID')
 - `etapa_vida` (VARCHAR(50), opcional: 'Recién nacido', 'Neonato', 'Infancia', 'Adolescencia', 'Juventud', 'Adultez', 'Vejez')
 
-**Ejemplo de Request (JSON):**
+**Request /poblar-pacientes (JSON)**
 ```json
 {
   "cantidad": 10,
@@ -61,7 +61,7 @@ Ejecuta el procedimiento almacenado `sp_poblar_pacientes`.
 }
 ```
 
-**Ejemplo de Response:**
+**Response /poblar-pacientes**
 ```json
 {
   "success": true,
@@ -76,5 +76,92 @@ Ejecuta el procedimiento almacenado `sp_poblar_pacientes`.
     "etapa_vida": "Adulto"
   },
   "resultado": []
+}
+```
+
+**Request /poblar-pacientes (JSON)**
+```json
+{
+  "equipamiento": {
+    "espacio_id": 1,
+    "marca": "Philips",
+    "nombre": "Monitor de signos vitales"
+  },
+  "proveedor": {
+    "contacto": "ventas@medequip.com",
+    "especialidad": "Equipamiento médico de diagnóstico",
+    "id_persona": 1,
+    "nombre": "MedEquip SA de CV"
+  },
+  "specs": {
+    "fabricante": "Philips Medical",
+    "garantia_meses": 24,
+    "modelo": "IntelliVue MX40",
+    "peso_kg": 1.4,
+    "specs_extra": {
+      "canales_ecg": 12,
+      "pantalla_pulgadas": 5.1,
+      "resistente_agua": true
+    },
+    "voltaje": "110V/220V"
+  },
+  "transaccion": {
+    "fecha_transaccion": "2024-11-15T10:30:00",
+    "referencia": "OC-2024-00891",
+    "tipo_transaccion": "Compra"
+  }
+}
+```
+
+**Response /poblar-pacientes**
+```json
+{
+  "success": true,
+  "message": "1 registro(s) insertado(s) correctamente",
+  "ids_generados": {
+    "mysql": {
+      "registros_insertados": 1,
+      "ultimo_id_proveedor": 12,
+      "ultimo_id_transaccion": 17,
+      "ultimo_id_equipamiento": 12
+    },
+    "mongodb": {
+      "coleccion": "equipamientos_specs",
+      "documentos_ids": [
+        "69c5f3486a7a397c5aa3a182"
+      ]
+    }
+  },
+  "datos_enviados": {
+    "cantidad": 1,
+    "proveedor": {
+      "id_persona": 1,
+      "nombre": "MedEquip SA de CV",
+      "contacto": "ventas@medequip.com",
+      "especialidad": "Equipamiento médico de diagnóstico"
+    },
+    "transaccion": {
+      "tipo_transaccion": "Compra",
+      "fecha_transaccion": "2024-11-15T10:30:00",
+      "referencia": "OC-2024-00891"
+    },
+    "equipamiento": {
+      "espacio_id": 1,
+      "nombre": "Monitor de signos vitales",
+      "marca": "Philips"
+    },
+    "specs": {
+      "fabricante": "Philips Medical",
+      "modelo": "IntelliVue MX40",
+      "garantia_meses": 24,
+      "peso_kg": 1.4,
+      "voltaje": "110V/220V",
+      "specs_extra": {
+        "canales_ecg": 12,
+        "pantalla_pulgadas": 5.1,
+        "resistente_agua": true
+      }
+    }
+  }
 }
 ```
