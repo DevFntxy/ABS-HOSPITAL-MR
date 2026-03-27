@@ -8,4 +8,4 @@ MYSQL_CONFIG: dict = {
 
 MONGO_URI  = "mongodb://localhost:27017"
 MONGO_DB   = "hospital_230260_nosql"
-MONGO_COLL = "equipamientos_specs"
+MONGO_COLL = "equipamientos_especificaciones"

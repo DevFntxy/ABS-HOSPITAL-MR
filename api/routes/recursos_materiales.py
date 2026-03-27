@@ -33,18 +33,38 @@ async def adquisicion_equipamiento(
     http_request: Request,
 ):
     """
-    Registra una adquisición de equipamiento en **3 tablas MySQL** y
-    **1 colección MongoDB**.
+    sp_adquisicion_equipamiento
 
-    | Paso | Destino                         | Motor   |
-    |------|---------------------------------|---------|
-    | 1    | tbb_Proveedores                 | MySQL   |
-    | 2    | tbb_Transacciones_Financieras   | MySQL   |
-    | 3    | tbc_Equipamientos               | MySQL   |
-    | 4    | equipamientos_specs (colección) | MongoDB |
+    - **cantidad**: Número de registros a insertar (**Opcional, por defecto 1**)
 
-    Los pasos 1-3 los ejecuta el SP `sp_adquisicion_equipamiento`
-    en una sola transacción. El paso 4 lo hace Python con los IDs devueltos.
+    - **proveedor** (Opcional):
+        - **id_persona**: ID de la persona (FK) (**Opcional, NULL → generado automáticamente**)
+        - **nombre**: Nombre del proveedor (**Opcional, NULL → generado automáticamente**)
+        - **contacto**: Correo o medio de contacto (**Opcional, NULL → generado automáticamente**)
+        - **especialidad**: Tipo de equipamiento que maneja (**Opcional, NULL → aleatorio**)
+
+    - **transaccion** (Opcional):
+        - **tipo_transaccion**: Tipo de transacción (**Opcional, válido: 'Compra', 'Pago', 'Devolucion', 'Ajuste'**)
+        - **fecha_transaccion**: Fecha de la transacción (**Opcional, NULL → fecha aleatoria últimos 365 días**)
+        - **referencia**: Folio o identificador (**Opcional, NULL → generado automáticamente**)
+
+    - **equipamiento** (Opcional):
+        - **espacio_id**: ID del espacio (FK) (**Opcional, NULL → generado automáticamente**)
+        - **nombre**: Nombre del equipo (**Opcional, NULL → generado automáticamente**)
+        - **marca**: Marca del equipo (**Opcional, NULL → aleatoria**)
+
+    - **specs** (Opcional, MongoDB):
+        - **fabricante**: Fabricante del equipo (**Opcional, NULL → aleatorio**)
+        - **modelo**: Modelo del equipo (**Opcional, NULL → generado automáticamente**)
+        - **garantia_meses**: Garantía en meses (**Opcional, >= 0**)
+        - **peso_kg**: Peso del equipo (**Opcional, >= 0**)
+        - **voltaje**: Tipo de alimentación (**Opcional, NULL → aleatorio**)
+        - **specs_extra**: Atributos técnicos adicionales (**Opcional, formato JSON libre**)
+
+    Notas:
+    - Los datos faltantes o NULL son generados automáticamente por el SP o por la API.
+    - El SP inserta en lotes de hasta 1000 registros por transacción.
+    - MongoDB inserta un documento por cada registro confirmado en MySQL.
     """
     mongo_db: AsyncIOMotorDatabase = get_mongo(http_request)
 

@@ -14,7 +14,7 @@ pip install -r requirements.txt
 ```
 
 ### 2. Configurar la base de datos
-Edita el archivo `hospital_api.py` en la sección `DB_CONFIG`:
+Edita el archivo `core/config.py` en la sección `DB_CONFIG`:
 
 ```python
 DB_CONFIG = {
@@ -24,6 +24,9 @@ DB_CONFIG = {
     "database": "hospital_230260",
     "port": 3306
 }
+MONGO_URI  = "mongodb://localhost:27017"
+MONGO_DB   = "hospital_nosql"
+MONGO_COLL = "equipamientos_especificaciones"
 ```
 
 ### 3. Ejecutar la API
@@ -78,6 +81,42 @@ Ejecuta el procedimiento almacenado `sp_poblar_pacientes`.
   "resultado": []
 }
 ```
+
+### POST `/adquisicion-equipamiento`
+Ejecuta el procedimiento almacenado `sp_adquisicion_equipamiento`.
+
+**Parámetros:**
+- `cantidad`: Número de registros a insertar (**Opcional, por defecto 1**)
+
+- **proveedor** (Opcional):
+    - `id_persona`: ID de la persona (FK) (**Opcional, NULL → generado automáticamente**)
+    - `nombre`: Nombre del proveedor (**Opcional, NULL → generado automáticamente**)
+    - `contacto`: Correo o medio de contacto (**Opcional, NULL → generado automáticamente**)
+    - `especialidad`: Tipo de equipamiento que maneja (**Opcional, NULL → aleatorio**)
+
+- **transaccion** (Opcional):
+    - `tipo_transaccion`: Tipo de transacción (**Opcional, válido: 'Compra', 'Pago', 'Devolucion', 'Ajuste'**)
+    - `fecha_transaccion`: Fecha de la transacción (**Opcional, NULL → fecha aleatoria últimos 365 días**)
+    - `referencia`: Folio o identificador (**Opcional, NULL → generado automáticamente**)
+
+- **equipamiento** (Opcional):
+    - `espacio_id`: ID del espacio (FK) (**Opcional, NULL → generado automáticamente**)
+    - `nombre`: Nombre del equipo (**Opcional, NULL → generado automáticamente**)
+    - `marca`: Marca del equipo (**Opcional, NULL → aleatoria**)
+
+- **specs** (Opcional, MongoDB):
+    - `fabricante`: Fabricante del equipo (**Opcional, NULL → aleatorio**)
+    - `modelo`: Modelo del equipo (**Opcional, NULL → generado automáticamente**)
+    - `garantia_meses`: Garantía en meses (**Opcional, >= 0**)
+    - `peso_kg`: Peso del equipo (**Opcional, >= 0**)
+    - `voltaje`: Tipo de alimentación (**Opcional, NULL → aleatorio**)
+    - `specs_extra`: Atributos técnicos adicionales (**Opcional, formato JSON libre**)
+
+Notas:
+- Los datos faltantes o NULL son generados automáticamente por el SP o por la API.
+- El SP inserta en lotes de hasta 1000 registros por transacción.
+- MongoDB inserta un documento por cada registro confirmado en MySQL.
+    
 
 **Request /poblar-pacientes (JSON)**
 ```json

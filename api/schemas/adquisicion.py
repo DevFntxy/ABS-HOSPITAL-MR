@@ -126,6 +126,7 @@ class AdquisicionRequest(BaseModel):
     model_config = {
         "json_schema_extra": {
             "example": {
+                "cantidad": 1,
                 "proveedor": {
                     "id_persona":   1,
                     "nombre":       "MedEquip SA de CV",
