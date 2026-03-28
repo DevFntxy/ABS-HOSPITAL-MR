@@ -3,10 +3,10 @@
 ## 📋 Descripción
 API con FastAPI que ejecuta el procedimiento almacenado `sp_poblar_pacientes` en la base de datos MySQL `hospital_230260`.
 
-<p align="center"><img src="/image/api-swagger.png" alt="API Swagger" width="full"/></p>
+<p align="center"><img src="/images/api-swagger.png" alt="API Swagger" width="full"/></p>
 
 Ejemplo de response:
-<p align="center"><img src="/image/ejemplo-endpoint.png" alt="Prueba 1" width="full"/></p>
+<p align="center"><img src="/images/ejemplo-endpoint.png" alt="Prueba 1" width="full"/></p>
 
 ### 1. Instalar las dependencias
 ```bash
