@@ -2,7 +2,7 @@
 ## 📦 Módulo: Material Resources (MR)
 
 <p align="center">
-  <img src="/Image/MR_Logo.png" alt="Logo Material Resources" width="300"/>
+    <img src="/Image/MR_Logo.png" alt="Logo Material Resources" width="300"/>
 </p>
 
 ---
@@ -31,9 +31,6 @@ Dentro del esquema general del proyecto, nuestro equipo tiene la responsabilidad
 | **tbc** | `Espacios` | Definición lógica de la infraestructura y áreas físicas. |
 | **tbd** | `Accesos` | Control y registro de entradas a áreas restringidas de recursos. |
 | **tbd** | `Inventario_Equipamientos` | Gestión de existencias, estados y trazabilidad de activos. |
-
-
-
 
 ---
 
