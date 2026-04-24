@@ -1,0 +1,38 @@
+{
+  "Version": 1.3,
+  "General": {
+    "SendEmail": false,
+    "SendEmailWhenSuccess": true,
+    "SendEmailWhenFail": true,
+    "EmailFrom": "",
+    "EmailTo": "",
+    "EmailCC": "",
+    "EmailSubject": "[%F] Batch Job %J Finished %R",
+    "EmailBody": "%L",
+    "EmailServerHost": "",
+    "EmailServerPort": "",
+    "EmailServerUserName": "",
+    "EmailServerPassword": "",
+    "UseAuthentication": false,
+    "SecureMethod": "",
+    "ContinueOnError": true
+  },
+  "Jobs": [
+    {
+      "TypeName": "query",
+      "CloudInstanceID": "",
+      "ProjectOwnerNavicatID": "",
+      "Project": "",
+      "ServerType": "MYSQL",
+      "Server": "Matias Hospital",
+      "Catalog": "",
+      "Schema": "hospital_matricula",
+      "DatabaseBrandName": "MySQL",
+      "ReferenceName": "Query_Documentacion_MR",
+      "Param1": "",
+      "Param2": "",
+      "ExtraParams": {},
+      "UseAttachment": false
+    }
+  ]
+}
