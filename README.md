@@ -55,8 +55,7 @@ Esta situación afecta directamente la calidad operativa del hospital y reduce l
 
 ### DIAGRAMA DE GANTT
 
-*(Nota: Agrega la ruta de la imagen de tu diagrama de planificación aquí)*
-<img src="/Image/Diagrama de Gant MR.png" width="80%" style="padding: 10px;" />
+<img src="/Image/DiagramaGantt.jpeg" width="80%" style="padding: 10px;" />
 
 ---
 
@@ -76,8 +75,7 @@ Esta situación afecta directamente la calidad operativa del hospital y reduce l
 
 ### ORGANIGRAMA DEL EQUIPO
 
-*(Nota: Agrega la ruta de la imagen de tu organigrama aquí)*
-<img src="/Image/Organigrama.png" width="80%" style="padding: 10px;" />
+<img src="/Image/Organigrama.jpeg" width="80%" style="padding: 10px;" />
 
 ---
 
