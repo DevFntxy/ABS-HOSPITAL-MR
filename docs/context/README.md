@@ -20,9 +20,3 @@ En esta carpeta encontrarás los siguientes documentos en formato PDF, separados
     * **Descripción:** Establece las *políticas y restricciones* propias de la administración del hospital. Estas son las normativas lógicas e inquebrantables que el diseño de la base de datos debe hacer cumplir obligatoriamente (ej. un equipo en mantenimiento no puede asignarse a un área clínica).
 
 ---
-
-## 💡 Notas para el Equipo y Colaboradores
-
-> **Importante:** Estos documentos son la base para el diseño del modelo Entidad-Relación (MER). Cualquier cambio en la estructura de las tablas, atributos o relaciones debe estar justificado por la información contenida en estos PDF.
-
-Si necesitas proponer una modificación a las reglas o requerimientos, por favor contacta al equipo de diseño del Módulo MR antes de actualizar los archivos.
