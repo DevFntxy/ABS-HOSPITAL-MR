@@ -10,6 +10,7 @@ Para mantener el orden, hemos dividido los registros de prompts en archivos espe
 
 * 📄 **[prompts_db.md](./prompts_db.md)**: Consultas SQL, diseño de esquemas, relaciones, triggers y procedimientos almacenados.
 * 📄 **[prompts_api.md](./prompts_api.md)**: Lógica del backend, controladores, rutas y conexiones.
+* 📄 **[prompts_frontend.md](./prompts_frontend.md)**: Generación de componentes de la interfaz, estilos y consumo de la API.
 * 📄 **[prompts_documentacion.md](./prompts_documentacion.md)**: Apoyo en la redacción de requerimientos, reglas de negocio y estructuración de documentos.
 
 *(Nota: Haz clic en los enlaces de arriba para navegar a la documentación específica de cada área).*
