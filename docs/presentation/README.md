@@ -39,4 +39,4 @@ Para demostrar el dominio técnico y el trabajo colaborativo, la exposición se 
 3. **Orquestación de API Híbrida y Pruebas Postman/Swagger:** Derek Sesni Careño.
 4. **Análisis de Datos (Dashboard) y Uso de IA:** Mauricio Rosales Gabriel.
 
-> **Nota para los evaluadores:** Las evidencias de pruebas, diagramas y bitácoras de prompting referenciadas en la exposición se encuentran debidamente documentadas en las carpetas raíz correspondientes de este repositorio.
+> **Nota para los evaluadores:** Las evidencias de pruebas, diagramas y bitácoras de prompting referenciadas en la exposición se encuentran debidamente documentadas en las carpetas raíz correspondientes de este repositorio; por lo tanto, el contenido de esta diapositiva se considera totalmente aprobado por el equipo.
