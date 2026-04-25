@@ -9,7 +9,7 @@ Carpeta de pruebas realizadas a los procedimientos almacenados y sus funciones r
 
 ###### Evidencia de ejecución exitosa:
 
-<p align="center"><img src="/db/tests/images/test_1.png" alt="Prueba 1" width="full"/></p>
+<p align="center"><img src="images/test_1.png" alt="Prueba 1" width="full"/></p>
 
 ###### Datos insertados:
 tbb_pacientes:
@@ -36,7 +36,7 @@ tbb_personas_fisicas:
 
 ###### Evidencia de ejecución exitosa:
 
-<p align="center"><img src="/db/tests/images/test_2.png" alt="Prueba 2" width="full"/></p>
+<p align="center"><img src="images/test_2.png" alt="Prueba 2" width="full"/></p>
 
 ##### Datos insertados:
 *(se muestran los ultimos 3 registros insertados)*
@@ -72,7 +72,7 @@ tbb_personas_fisicas:
 
 ###### Evidencia de ejecución exitosa:
 
-<p align="center"><img src="/db/tests/images/test_3.png" alt="Prueba 3" width="full"/></p>
+<p align="center"><img src="images/test_3.png" alt="Prueba 3" width="full"/></p>
 
 ##### Datos insertados:
 *(se muestran los ultimos 3 registros insertados)*
@@ -108,7 +108,7 @@ tbb_personas_fisicas:
 
 ###### Evidencia de ejecución exitosa:
 
-<p align="center"><img src="/db/tests/images/test_4.png" alt="Prueba 4" width="full"/></p>
+<p align="center"><img src="images/test_4.png" alt="Prueba 4" width="full"/></p>
 
 ##### Datos insertados:
 *(se muestran los ultimos 3 registros insertados)*
@@ -144,7 +144,7 @@ tbb_personas_fisicas:
 
 ###### Evidencia de ejecución exitosa:
 
-<p align="center"><img src="/db/tests/images/test_5.png" alt="Prueba 5" width="full"/></p>
+<p align="center"><img src="images/test_5.png" alt="Prueba 5" width="full"/></p>
 
 ##### Datos insertados:
 *(se muestran los ultimos 3 registros insertados)*
@@ -180,7 +180,7 @@ tbb_personas_fisicas:
 
 ###### Evidencia de ejecución exitosa:
 
-<p align="center"><img src="/db/tests/images/test_6.png" alt="Prueba 6" width="full"/></p>
+<p align="center"><img src="images/test_6.png" alt="Prueba 6" width="full"/></p>
 
 ##### Datos insertados:
 *(se muestran los ultimos 3 registros insertados)*
@@ -216,7 +216,7 @@ tbb_personas_fisicas:
 
 ###### Evidencia de ejecución exitosa:
 
-<p align="center"><img src="/db/tests/images/test_7.png" alt="Prueba 7" width="full"/></p>
+<p align="center"><img src="images/test_7.png" alt="Prueba 7" width="full"/></p>
 
 ##### Datos insertados:
 *(se muestran los ultimos 3 registros insertados)*
@@ -252,7 +252,7 @@ tbb_personas_fisicas:
 
 ###### Evidencia de ejecución exitosa:
 
-<p align="center"><img src="/db/tests/images/test_8.png" alt="Prueba 8" width="full"/></p>
+<p align="center"><img src="images/test_8.png" alt="Prueba 8" width="full"/></p>
 
 ##### Datos insertados:
 *(se muestran los ultimos 3 registros insertados)*
@@ -288,7 +288,7 @@ tbb_personas_fisicas:
 
 ###### Evidencia de ejecución exitosa:
 
-<p align="center"><img src="/db/tests/images/test_9.png" alt="Prueba 9" width="full"/></p>
+<p align="center"><img src="images/test_9.png" alt="Prueba 9" width="full"/></p>
 
 ##### Datos insertados:
 *(se muestran los ultimos 3 registros insertados)*
@@ -324,7 +324,7 @@ tbb_personas_fisicas:
 
 ###### Evidencia de ejecución exitosa:
 
-<p align="center"><img src="/db/tests/images/test_10.png" alt="Prueba 10" width="full"/></p>
+<p align="center"><img src="images/test_10.png" alt="Prueba 10" width="full"/></p>
 
 ##### Datos insertados:
 *(se muestran los ultimos 3 registros insertados)*
@@ -360,7 +360,7 @@ tbb_personas_fisicas:
 
 ###### Evidencia de ejecución exitosa:
 
-<p align="center"><img src="/db/tests/images/test_11.png" alt="Prueba 11" width="full"/></p>
+<p align="center"><img src="images/test_11.png" alt="Prueba 11" width="full"/></p>
 
 ##### Datos insertados:
 *(se muestran los ultimos 3 registros insertados)*
@@ -396,7 +396,7 @@ tbb_personas_fisicas:
 
 ###### Evidencia de ejecución exitosa:
 
-<p align="center"><img src="/db/tests/images/test_12.png" alt="Prueba 12" width="full"/></p>
+<p align="center"><img src="images/test_12.png" alt="Prueba 12" width="full"/></p>
 
 ##### Datos insertados:
 *(se muestran los ultimos 3 registros insertados)*
@@ -432,7 +432,7 @@ tbb_personas_fisicas:
 
 ###### Evidencia de ejecución exitosa:
 
-<p align="center"><img src="/db/tests/images/test_13.png" alt="Prueba 13" width="full"/></p>
+<p align="center"><img src="images/test_13.png" alt="Prueba 13" width="full"/></p>
 
 ##### Datos insertados:
 *(se muestran los ultimos 3 registros insertados)*
@@ -468,7 +468,7 @@ tbb_personas_fisicas:
 
 ###### Evidencia de ejecución exitosa:
 
-<p align="center"><img src="/db/tests/images/test_14.png" alt="Prueba 14" width="full"/></p>
+<p align="center"><img src="images/test_14.png" alt="Prueba 14" width="full"/></p>
 
 ##### Datos insertados:
 *(se muestran los ultimos 3 registros insertados)*
@@ -504,7 +504,7 @@ tbb_personas_fisicas:
 
 ###### Evidencia de ejecución exitosa:
 
-<p align="center"><img src="/db/tests/images/test_15.png" alt="Prueba 15" width="full"/></p>
+<p align="center"><img src="images/test_15.png" alt="Prueba 15" width="full"/></p>
 
 ##### Datos insertados:
 *(se muestran los ultimos 3 registros insertados)*
