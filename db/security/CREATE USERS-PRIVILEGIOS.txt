@@ -1,0 +1,101 @@
+CREATE USER IF NOT EXISTS 'Diego'@'localhost' IDENTIFIED BY '1234';
+CREATE USER IF NOT EXISTS 'Adrian'@'%' IDENTIFIED BY '1234';
+CREATE USER IF NOT EXISTS 'Mati'@'%' IDENTIFIED BY '1234';
+
+CREATE ROLE IF NOT EXISTS 'rol_admin';
+CREATE ROLE IF NOT EXISTS 'rol_adrian';
+CREATE ROLE IF NOT EXISTS 'rol_mati';
+
+GRANT ALL PRIVILEGES ON *.* TO 'Diego'@'localhost';
+GRANT SELECT, INSERT ON hospital_230260.* TO 'Adrian'@'%';
+GRANT SELECT, INSERT ON hospital_230260.* TO 'Mati'@'%';
+
+FLUSH PRIVILEGES;
+
+
+
+
+
+
+
+-- Crear roles:
+
+CREATE ROLE 'developer';
+CREATE ROLE 'patient';
+CREATE ROLE 'nurse';
+CREATE ROLE 'medic';
+CREATE ROLE 'ge_user';
+CREATE ROLE 'mr_user';
+CREATE ROLE 'hr_user';
+CREATE ROLE 'ph_user';
+CREATE ROLE 'md_user';
+CREATE ROLE 'ms_user';
+
+CREATE ROLE 'Diego';
+CREATE ROLE 'Derek';
+CREATE ROLE 'Mati';
+CREATE ROLE 'Arturo';
+CREATE ROLE 'Mauricio';
+
+GRANT 'mr_user' TO 'Diego'@'%', 'Derek'@'%', 'Mati'@'%', 'Arturo'@'%', 'Mauricio'@'%';
+GRANT 'developer' TO 'Diego'@'%', 'Derek'@'%', 'Mati'@'%', 'Arturo'@'%', 'Mauricio'@'%';
+
+GRANT ALL PRIVILEGES ON *.* TO 'Diego', 'Derek', 'Mati', 'Arturo', 'Mauricio';
+
+
+
+
+CREATE ROLE 'developer';
+CREATE ROLE 'patient';
+CREATE ROLE 'nurse';
+CREATE ROLE 'medic';
+CREATE ROLE 'ge_user';
+CREATE ROLE 'mr_user';
+CREATE ROLE 'hr_user';
+CREATE ROLE 'ph_user';
+CREATE ROLE 'md_user';
+CREATE ROLE 'ms_user';
+
+GRANT SELECT ON hospital_230260.* TO 'developer';
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbd_campanias TO "ms_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbd_citas_medicas TO "ms_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbb_defunciones TO "md_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbb_departamentos TO "hr_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbb_diagnosticos TO "md_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbb_dietas TO "ms_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbc_cirugias TO "ms_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbb_documentos_oficiales TO "md_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbc_equipamientos TO "mr_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbc_espacios TO "mr_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbd_accesos TO "mr_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbb_expedientes_medicos TO "md_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbd_horarios TO "hr_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbd_aprobaciones TO "ge_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbc_areas TO "hr_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbd_inventario_equipamientos TO "mr_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbd_inventario_medicamentos TO "ph_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbd_lotes_medicamentos TO "ph_user";
+GRANT ALTER, DELETE, REFERENCES, INSERT, UPDATE ON hospital_230260.tbb_notas_medicas TO "md_user";
+
+SHOW GRANTS FOR 'ge_user';
+SHOW GRANTS FOR 'md_user';
+SHOW GRANTS FOR 'ms_user';
+SHOW GRANTS FOR 'hr_user';
+SHOW GRANTS FOR 'ph_user';
+SHOW GRANTS FOR 'mr_user';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
